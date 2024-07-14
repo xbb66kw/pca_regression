@@ -33,8 +33,8 @@ X <- array(rnorm(n * p), c(n, p))
 y <- X %*% beta + error.sd * rnorm(n)
 ```
 - train sample and validation sample 用於評估適當的參數數目使用
-  > [!IMPORTANT]
-  >  以 knn 為例，看看結果有什麼不同？
+> [!IMPORTANT]
+>  以 knn 為例，看看結果有什麼不同？
 
 
 ## validation.R
