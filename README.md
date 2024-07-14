@@ -60,9 +60,12 @@ y <- X %*% beta + error.sd * rnorm(n)
 
 > [!IMPORTANT]
 > 評估 factor model 是不適用於以下序列： "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
+
 > 你可能會需要 FRED-MD_updated_appendix.pdf 幫助尋找變數名稱
+
 > 保持簡潔扼要。重點是說服你的聽眾
 
 > [!IMPORTANT]
 > 預測以下序列在 6/1/2024 的值: "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
+
 > 黑魔法允許
