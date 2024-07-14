@@ -4,6 +4,12 @@
 # auxiliary function
 norm_vec <- function(x, a) (sum(x^a))^(1/a)
 
+DIM <- function(x) {
+  if( is.null( dim(x) ) )
+    return( length(x) )
+  dim(x)
+}
+
 ###
 ####
 # simulated data: An example
@@ -91,18 +97,22 @@ pca.model.fitter <- function(X, y) {
   
   
   return (function(U) { 
-    new.pca.X <- array(0, c(DIM(U)[1], n_pc))
+    cf <- pca.model$coefficients
+    fitted.coef <- array(0, DIM(X)[2])
     for (j in 1:n_pc) {
-      new.pca.X[, j] <- U %*% svd.X$v[, j]
+      fitted.coef <- fitted.coef + cf[1 + j] * svd.X$v[, j]
     }
+    # Include the intercept
+    fitted.coef <- c(cf[1], fitted.coef)
     
-    return(cbind(1, new.pca.X) %*% pca.model$coefficients)
+    return(cbind(1, U) %*% fitted.coef)
   })
 }
 
 # fitted loss of pca.model
 train_validation(pca.model.fitter, X, y)
-
+# comparison with lm.model
+train_validation(lm.model.fitter, X, y)
 
 
 ###

@@ -52,3 +52,16 @@ y <- X %*% beta + error.sd * rnorm(n)
 # the test sample R^2
 train_validation(lm.model.fitter, X, y)
 
+###
+####
+# Your task:
+# Implement a model fitter for knn
+# simulated data
+
+# Hint: knn predictor 可以在 knn_fittedloss.R 找到唷
+
+knn.model.fitter <- function(X, y) {
+  "working here!"
+  predictor <- function (X.test) { "working here!" }
+  return (predictor)
+}

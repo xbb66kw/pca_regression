@@ -20,8 +20,6 @@ names(categories)
 "UNRATE" %in% names(categories) 
 
 
-
-
 HOUST.ind <- index_finder("HOUST") # 48
 HOUST.friend.ind <- index_finder(c("HOUST", "HOUSTNE", "HOUSTMW", "HOUSTS", "HOUSTW"))
 
