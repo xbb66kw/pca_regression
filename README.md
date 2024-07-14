@@ -11,7 +11,7 @@ E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
   - 一個想法是 factor model
 
 > [!IMPORTANT]
-> 試著評估 factor model 是不是更適合用來處理我們手上的資料.
+> 今天目標：試著評估 factor model 是不是更適合用來處理我們手上的資料.
 
 # Train / Validation Samples
 
@@ -43,3 +43,11 @@ y <- X %*% beta + error.sd * rnorm(n)
 > [!IMPORTANT]
 >  以 knn 實作 model fitter
 
+## pca_regression.R
+### 實作一個可以利用 factor model 的統計模型
+- 模擬資料 : 適合 factor model / 適合 regression model
+- 評估 lm.model 是否適合該底模擬資料
+- 介紹 pca regression (大家辛苦了~)
+- Model fitter of pca.model
+> [!NOTE]
+> 如果有超過一個 latent factors 在 covariate matrix 裡呢？
