@@ -56,7 +56,11 @@ y <- X %*% beta + error.sd * rnorm(n)
 - source("/.../data_process.r")
 > [!NOTE]
 > 記得換路徑唷
--
+- FRED-MD 資料檢查
+- 準備 AR(2) 的 covariance matrix
+- 估一個 AR(2) 模型
+- 估一個 pca AR(2) 模型 pca.ar.model (大家又辛苦了~)
+- Model fitter for pca.ar.model 
 
 > [!IMPORTANT]
 > 評估 factor model 是不適用於以下序列： "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
