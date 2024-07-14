@@ -19,9 +19,10 @@ E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
 
 # R codes introduction:
 
-初步評估統計方法的好工具
 
 ## knn_fittedloss.R
+
+> 初步評估統計方法的好工具
 
  - 簡單的模擬資料：
 ```
