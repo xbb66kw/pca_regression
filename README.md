@@ -17,12 +17,21 @@ E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
 
 初步評估統計方法的好工具
 
-\get Linear Regression 
-\get k-Nearest Neighbor Method
-\get Sample splitting
-\get Fitted loss
-\get U-shaped fitted loss for nested models
-\begin{itemize}
-\get Mini Task: Comment on the results
-\end{itemize}
-\get Apply Train / Validation Samples to general models
+## knn_fittedloss.R
+
+ - 簡單的模擬資料：
+```
+n <- 100
+p <- 50
+error.sd <- 1
+s_star <- 10
+beta <- rep(0, p)
+beta[s_star] <- 1
+
+# simulated data
+X <- array(rnorm(n * p), c(n, p))
+y <- X %*% beta + error.sd * rnorm(n)
+```
+- train sample and validation sample 用於評估適當的參數數目使用
+- 以 knn 為例，看看結果有什麼不同？
+
