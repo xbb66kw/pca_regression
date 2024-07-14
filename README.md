@@ -15,3 +15,14 @@ E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
 
 # Train / Validation Samples
 
+初步評估統計方法的好工具
+
+\get Linear Regression 
+\get k-Nearest Neighbor Method
+\get Sample splitting
+\get Fitted loss
+\get U-shaped fitted loss for nested models
+\begin{itemize}
+\get Mini Task: Comment on the results
+\end{itemize}
+\get Apply Train / Validation Samples to general models
