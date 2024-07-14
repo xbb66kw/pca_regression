@@ -51,6 +51,19 @@ y <- X %*% beta + error.sd * rnorm(n)
 ## pca_regression.R
 ### 實作一個可以利用 factor model 的統計模型
 - 模擬資料 : 適合 factor model / 適合 regression model
+  
+  ```
+  n <- 100  
+  p <- 50
+  error.rate <- 0.3
+  beta.temp  <- rep(1, p)
+  beta <- beta.temp / norm_vec(beta.temp, 1) # standardized
+
+  # training sample
+  X <- array(rnorm(n), c(n, p)) + error.rate * array(rnorm(n * p), c(n, p))
+  y <- X %*% beta + rnorm(n)
+  ```
+  
 - 評估 lm.model 是否適合該底模擬資料
 - 介紹 pca regression (大家辛苦了~)
 - Model fitter of pca.model
