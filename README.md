@@ -10,10 +10,14 @@ E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
   - 一個想法是 regression
   - 一個想法是 factor model
 
-> [!IMPORTANT]
+> [!NOTE]
 > 今天目標：試著評估 factor model 是不是更適合用來處理我們手上的資料.
 
-# Train / Validation Samples
+> 會使用一個簡單的統計評估工具
+
+> 還有介紹一個基於 factor model assumption 的 regression method: pca regression
+
+# R codes introduction:
 
 初步評估統計方法的好工具
 
