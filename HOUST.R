@@ -26,6 +26,8 @@ HOUST.ind <- index_finder("HOUST") # 48
 HOUST.friend.ind <- index_finder(c("HOUST", "HOUSTNE", "HOUSTMW", "HOUSTS", "HOUSTW"))
 
 
+###
+####
 # Build an AR(2) model for "HOUST"
 response <- data_organized[, HOUST.ind]
 response <- response[3:length(response)]
@@ -49,15 +51,17 @@ response
 X[, 1]
 X[, 6]
 
+
+
 ###
 ####
-#### AR(2)
+# AR(2)
 lm.predictor <- lm.model.fitter(X, response)
 # in-sample predicted values of y
 
 ###
 ####
-#### AR(2) PCA regression
+# AR(2) PCA regression
 # X[, 1:5] are the first lags of "HOUST", "HOUSTNE", "HOUSTMW", "HOUSTS", "HOUSTW"
 # X[, 6:10] are the second lags of them
 # pca regression coefficient getter
@@ -117,6 +121,6 @@ predictor(X)
 
 # validation fitted loss
 train_validation(pca.ar.model.fitter, X, response)
-
+# comparison with lm,.model
 train_validation(lm.model.fitter, X, response)
 
