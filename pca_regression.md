@@ -52,7 +52,7 @@ svd.X$v[, 1] # 估計單位權重向量 (1 / sqrt(p), ..., 1 / sqrt(p))
 
 為什麼不直接平均呢？
 
-如果 `X_{j} = Z + e_{j}, j = 1, p / 2` 而且 `X_{j} = U + e_{j}, j = 1 + p / 2, ..., p` 就不能用平均，只能用 `svd`
+如果 `X_{j} = Z + e_{j}, j = 1,..., p / 2` 而且 `X_{j} = U + e_{j}, j = 1 + p / 2, ..., p` 就不能用平均，只能用 `svd`
 
 ```
 n <- 100
@@ -68,7 +68,7 @@ svd.X$v[, 2] # 估計單位權重向量 (0, ..., 0, sqrt(2) / sqrt(p), ..., sqrt
 ```
 
 > [!NOTE]
-> `svd` 使用範圍非常廣，可以處理 common factors 的性組合。有興趣可以自己去查找資料唷！
+> `svd` 使用範圍非常廣，可以處理 common factors 的線性組合。有興趣可以自己去查找資料唷！
 
 綜上所敘 `X %*% svd.X$v[, 1]` 即是我們要尋找的 `Z`。
 
@@ -80,9 +80,9 @@ svd.X$v[, 2] # 估計單位權重向量 (0, ..., 0, sqrt(2) / sqrt(p), ..., sqrt
 - `reg y on Z` 得到 `a_hat`
 - 再將 `a_hat * svd.X$v[, 1]` 即是 `beta_hat`
 
-如果有 `n_pn` 個 principle components, 則 `a_hat` 是一個向量。`beta_hat` 這樣計算：
+如果有 `n_pc` 個 principle components, 則 `a_hat` 是一個向量。`beta_hat` 這樣計算：
 ```
-beta_hat = sum_{j=1}^{n_pn} a_hat[j] * svd.X$v[, j]
+beta_hat = sum_{j=1}^{n_pc} a_hat[j] * svd.X$v[, j]
 ```
 
 
