@@ -78,7 +78,7 @@ y <- X %*% beta + error.sd * rnorm(n)
 - Model fitter for pca.ar.model 
 
 > [!IMPORTANT]
-> 評估 factor model 是不適用於以下序列： "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
+> 評估 factor model 適不適用於以下序列： "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
 
 可使用此函式查找變數行 (column) 索引值
 ```
