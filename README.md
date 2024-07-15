@@ -1,4 +1,4 @@
-# .rds
+# training.rds
 從 1/1/1999 至 4/1/2024 的北美總體經濟月資料。
 
 可使用 data_processs.r 讀取:
@@ -18,8 +18,13 @@ source("/你的路徑/data_process.r")
 
 # FRED-MD_updated_appendix.pdf
 
-`which(names(categories)  %in% "S.P.500")`
-
+在 `data_organized` 裡面變數的一些細節。文件包含變數名稱以供查找。
+可用以下函數找變數 "S.P.500" 行 (column) 索引值
+```
+which(names(categories)  %in% "S.P.500")
+```
+> [!NOTE]
+> 文檔內變數名稱符號可能會與程式碼內不同。譬如文檔內寫 "S&P 500"，程式碼內不能有 "&" 符號，所以登記名稱為 "S.P.500"。大家要注意這點。
 
 #
 
