@@ -48,8 +48,8 @@ FRED-MD 資料檢查 / 準備 AR(2) 的 covariance matrix / 估一個 pca AR(2) 
 # additional_material
 一些補充資訊。
 
-# 其他
+> [!NOTE]
+> 在 Instruction.md 內，需要做的工作會以 [!IMPORTANT] 方式提醒。
 
-在 Instruction.md 內，需要做的工作會以 [!IMPORTANT] 方式提醒。
-
-
+> [!WARNING]
+> 程式碼未經完整測試。本次實作允許所有人出包。
