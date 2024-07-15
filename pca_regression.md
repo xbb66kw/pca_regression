@@ -82,11 +82,8 @@ svd.X$v[, 2] # 估計單位權重向量 (0, ..., 0, sqrt(2) / sqrt(p), ..., sqrt
 
 如果有 `n_pn` 個 principle components, 則 `a_hat` 是一個向量。`beta_hat` 這樣計算：
 ```
-sum_{j=1}^{n_pn} a_hat[j] * svd.X$v[, j]
+beta_hat = sum_{j=1}^{n_pn} a_hat[j] * svd.X$v[, j]
 ```
-
-> [!NOTE]
-> `X.test` 可能只有一個觀測值，`svd`不能用唷！
 
 
 
@@ -94,4 +91,6 @@ sum_{j=1}^{n_pn} a_hat[j] * svd.X$v[, j]
 > `X %*% svd.X$v[, j]` 稱為 `X` 的第 j 個 principle component。
 
 
+> [!NOTE]
+> `X.test` 可能只有一個觀測值，`svd`不能用唷！
 
