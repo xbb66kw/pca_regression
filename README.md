@@ -1,24 +1,24 @@
-# pca_regression
+# .rds
+從 1/1/1999 至 4/1/2024 的北美總體經濟月資料。
+
+可使用 data_processs.r 讀取:
+```
+source("/你的路徑/data_process.r")
+```
+資聊主要存在 `data_organized` 變數。
+> 包含302個月觀察值與126個經濟變數。
+變數 `date` 儲存時間點
+> date # 3/1/1999 - 4/1/2024
+變數 `categories` 儲存經濟變數名稱與其相對應變數處理碼 (FRED-MD code)
+> 我們不需使用 FRED-MD code
+可用 `names(categories)` 觀察變數名稱陣列
+
+# .pdf
+
+`which(names(categories)  %in% "S.P.500")`
 
 
-# Factor models v.s regression models
-
-E.g., Housing price indices 有分成美東, 美西, 美中, 等等.
-
-我們如果要預測全美 housing proce index (HOUST), 
-
-  - 一個想法是 regression model
-  - 一個想法是 factor model
-
-> [!NOTE]
-> 今天目標：試著評估 factor model 是不是更適合用來處理我們手上的資料.
-
-> 會使用一個簡單的統計評估工具
-
-> 還有介紹一個基於 factor model assumption 的 regression method: pca regression
-
-# R codes introduction:
-
+#
 
 ## knn_fittedloss.R
 
