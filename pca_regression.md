@@ -13,13 +13,15 @@ p <- 50
 error.rate <- 0.3
 beta.temp  <- rep(1, p)
 beta <- beta.temp / norm_vec(beta.temp, 1) # standardized
+beta_reg <- rep(0, p)
+beta_reg[1:5] <- 3
 ```
 
 regression model 適用的模擬資料
 ```
 # training sample
-X <- array(rnorm(n), c(n, p)) + error.rate * array(rnorm(n * p), c(n, p))
-y <- X %*% beta + rnorm(n)
+X <- array(rnorm(n), c(n, p))
+y <- X %*% beta_reg + rnorm(n)
 ```
 
 factor model 適用的模擬資料
@@ -30,7 +32,7 @@ y.test <- X.test %*% beta
 
 ```
 
-這是為什麼呢？
+有什麼差別呢？
 
 如果
 `X_{j} = X + e_{j}, j = 1, ..., p`, 我們要如何找回 `X`？
