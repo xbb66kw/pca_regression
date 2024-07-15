@@ -1,3 +1,9 @@
+# Instruction.md
+示範內容
+
+# pca_regression.md
+示範 pca regression。用 `svd` 函式實作。
+
 # training.rds
 從 1/1/1999 至 4/1/2024 的北美總體經濟月資料。
 
