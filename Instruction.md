@@ -91,6 +91,8 @@ which(names(categories)  %in% c("HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAU
 
 > [!IMPORTANT]
 > 預測以下序列在 6/1/2024 的值: "HOUST", "UNRATE", "S.P.500", "TB3SMFFM", "CPIAUCSL"
+> 評測標準：```sum_{j=1}^{5} ( (\hat{v}_{j} - v_{j}) \times (sd_{j})^{-1}  )^2.```
+> sd_{HOUST} =  0.6554, sd_{UNRATE} = 0.3790, sd_{S.P.500} = 0.0384, sd_{TB3SMFFM} = 0.2599, sd_{CPIAUCSL} = 0.3056.
 
 > 黑魔法允許
 
