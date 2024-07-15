@@ -49,6 +49,12 @@ FRED-MD 資料檢查 / 準備 AR(2) 的 covariance matrix / 估一個 pca AR(2) 
 一些補充資訊。
 
 > [!NOTE]
+> 組員間如何交流程式碼？你們可以使用 overleaf 或 google doc 進行比較有系統的實作。
+
+> [!NOTE]
+> 每次結論成果整理成 pdf 傳送至我們的信箱 xbb66kw@gmail.com。我們替各位投影 (如果有需要)。
+
+> [!NOTE]
 > 在 Instruction.md 內，需要做的工作會以 [!IMPORTANT] 方式提醒。
 
 > [!WARNING]
