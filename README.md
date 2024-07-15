@@ -7,13 +7,16 @@ source("/你的路徑/data_process.r")
 ```
 資聊主要存在 `data_organized` 變數。
 > 包含302個月觀察值與126個經濟變數。
+
 變數 `date` 儲存時間點
 > date # 3/1/1999 - 4/1/2024
+
 變數 `categories` 儲存經濟變數名稱與其相對應變數處理碼 (FRED-MD code)
 > 我們不需使用 FRED-MD code
+
 可用 `names(categories)` 觀察變數名稱陣列
 
-# .pdf
+# FRED-MD_updated_appendix.pdf
 
 `which(names(categories)  %in% "S.P.500")`
 
