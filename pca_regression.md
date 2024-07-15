@@ -29,3 +29,28 @@ X.test <- array(rnorm(n), c(n, p)) + error.rate * array(rnorm(n * p), c(n, p))
 y.test <- X.test %*% beta
 
 ```
+
+這是為什麼呢？
+
+如果
+`X_{j} = X + e_{j}, j = 1, ..., p`, 我們要如何找回 `X`？
+
+注意，如果 `e_{j}, j = 1,..., p`是 i.i.d., 那麼 `\sum_{j=1}^{p} 1/sqrt{p} * X_{j}` 可以估計 `X`，而且 `(1/sqrt{p}, ..., 1/sqrt{p})` 是單位長度權重向量。
+
+這種情況，R 的 `svd` 函數提供一個可能性。
+
+```
+svd.X <- svd(X)
+svd.X$u %*% diag(svd.X$d) %*% t(svd.X$v) # 還原 X
+
+
+svd.X$v[, 1] # 估計單位權重向量 (1 / sqrt(p), ..., 1 / sqrt(p))
+```
+
+為什麼不直接平均呢？
+
+如果 `X_{j} = X + e_{j}, j = 1, p / 2` 而且 `X_{j} = Z + e_{j}, j = 1 + p / 2, ..., p` 就不能用平均，只能用 `svd`
+
+> `svd` 使用範圍非常廣，可以處理 common factors 的性組合。有興趣可以自己去查找資料唷！
+
+
