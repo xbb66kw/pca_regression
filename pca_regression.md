@@ -27,8 +27,9 @@ y <- X %*% beta_reg + rnorm(n)
 factor model 適用的模擬資料
 ```
 # test sample
-X.test <- array(rnorm(n), c(n, p)) + error.rate * array(rnorm(n * p), c(n, p))
-y.test <- X.test %*% beta
+Z <- rnorm(n)
+X.test <- array(Z, c(n, p)) + error.rate * array(rnorm(n * p), c(n, p))
+y.test <- array(Z, c(n, p)) %*% beta
 
 ```
 
